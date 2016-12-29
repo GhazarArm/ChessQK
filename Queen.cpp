@@ -3,6 +3,13 @@
 #include <iostream>
 using namespace std;
 
+
+void Queen :: Problem()
+{
+	Position pos(0, 0, black);
+	Move(pos);	
+}
+
 void Queen :: Move(const Position& pos)
 {
 	if(pos.GetRow() == 8)
@@ -14,7 +21,7 @@ void Queen :: Move(const Position& pos)
 		for (int i = 0; i < 8; i++)
 		{
 			 
-			Position pos(i, pos.GetRow(), pos.GetColor(), pos.FreeOrNot());
+			Position pos(i, pos.GetRow(), pos.GetColor());
 			//Queen safe or not
 			if(CanMoveToCell(pos))
 			{
@@ -49,7 +56,7 @@ bool Queen :: CanMoveToCell(const Position& pos)
 	return true;
 }
 
-void Queen :: ShowBoard()
+void Queen :: Show()
 {
 		cout << count++ <<" :End of problem  " << endl;
 		for(int i = 0 ; i < 8 ; ++i)
