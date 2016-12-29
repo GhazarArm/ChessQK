@@ -5,7 +5,7 @@ int main ()
 	Figure* f;
 	int your_wanted_problem;
 	cin>>your_wanted_problem;
-	
+		
 	Position start_pos(0 , 0 , black);
 
 	if(your_wanted_problem == 1)
@@ -16,7 +16,11 @@ int main ()
 	else 
 	if(your_wanted_problem == 0)
 	{
-		f = new Knight(start_pos);
+		f = new Knight(2 , 2);
+	}
+	else
+	{
+		cout<<"error";
 	}
 
 	f->problem();
