@@ -15,17 +15,17 @@ protected:
 	Position* position;
 public:
 	//figure defoult constructor
-	Figure(){}
+	Figure();
 	//figure costructor give  position addres 
 	Figure(Position&);
 	//move figure on position in board cell
 	virtual void Move(Position&) = 0 ;
-	//
+	//if figure can move this position return true else  false
 	virtual bool CanMoveToCell(Position&) = 0 ;
-	//
-	virtual void Problem();
-	//
-	virtual void Show();
+	//solve problem which selected
+	virtual void Problem() = 0;
+	//show result
+	virtual void Show() = 0;
 
 	~Figure();
 };
