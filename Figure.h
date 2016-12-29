@@ -17,7 +17,7 @@ public:
 	//figure defoult constructor
 	Figure(){}
 	//figure costructor give  position addres 
-	Figure(Position&);
+	Figure(const Position&);
 	//move figure on position in board cell
 	virtual void Move(const Position&) = 0 ;
 	//
