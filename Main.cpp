@@ -5,12 +5,10 @@ int main ()
 	Figure* f;
 	int your_wanted_problem;
 	cin>>your_wanted_problem;
-		
-	Position start_pos(0 , 0 , black);
-
+	
 	if(your_wanted_problem == 1)
 	{
-		
+		Position start_pos(0 , 0 , black);
 		f = new Queen(start_pos);
 	}
 	else 
