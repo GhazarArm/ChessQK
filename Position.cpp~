@@ -1,6 +1,6 @@
 #include "Position.h"
 
-void Position::ChangePositionSituation()
+void Position::ChangePositionSituaion()
 {
 	free = !free;
 } 

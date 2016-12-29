@@ -1,6 +1,7 @@
 #include  "Queen.h"
 
 #include <iostream>
+using namespace std;
 
 void Queen :: Move(Position& pos)
 {
@@ -12,15 +13,19 @@ void Queen :: Move(Position& pos)
 	{
 		for (int i = 0; i < 8; i++)
 		{
-			//Queen safe or not 
-			if(CanMoveToCell(Position(i, pos.GetRow(), pos.GetColor(), pos.FreeOrNot())))
+			 
+			Position pos(i, pos.GetRow(), pos.GetColor(), pos.FreeOrNot());
+			//Queen safe or not
+			if(CanMoveToCell(pos))
 			{
 				//free cell -> false ,, the position row, column is now busy
 				pos.ChangePositionSituation();
 				//set in vector positions of safe queen
 				posvec[pos.GetRow()] = i;
+				//
+				Position pos(0 , pos.GetRow() + 1 , pos.GetColor(), pos.FreeOrNot());
 				//try place another Queen
-				Move(Position(0 , pos.GetRow() + 1 , pos.GetColor(), pos.FreeOrNot()));
+				Move(pos);
 			}
 
 		}

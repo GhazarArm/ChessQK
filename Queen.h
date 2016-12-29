@@ -16,6 +16,8 @@ public:
 	{}
 	void Move(Position& pos);
 	bool CanMoveToCell(Position& pos);
+	void Problem();
+	void Show();
 };
 
 #endif 

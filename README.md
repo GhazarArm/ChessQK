@@ -1,3 +1,3 @@
 # ChessQK
 
-Hi folks.In this solushion you can see 2 chess problems
+Hi folks.In this solushion you can see 2 chess problems 
