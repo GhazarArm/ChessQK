@@ -1,26 +1,26 @@
-#include "Position.h"
+#include"Position.h"
 
 void Position::ChangePositionSituation()
 {
-	status = !status;
-} 
-
+	free = !free;
+}
+//if position free return true else return false
 bool Position::FreeOrNot()
 {
-	return status;
+	return free;
 }
 
-int Position::GetRow()
+int Position::GetRow() const
 {
 	return rows;
 }
 
-int Position::GetCol()
+int Position::GetCol() const
 {
 	return column;
 }
 
-Color Position::GetColor()
+Color Position::GetColor() const
 {
 	return color;
 }
