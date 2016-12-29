@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-void Queen :: Move(Position& pos)
+void Queen :: Move(const Position& pos)
 {
 	if(pos.GetRow() == 8)
 	{
@@ -23,7 +23,7 @@ void Queen :: Move(Position& pos)
 				//set in vector positions of safe queen
 				posvec[pos.GetRow()] = i;
 				//
-				Position pos(0 , pos.GetRow() + 1 , pos.GetColor(), pos.FreeOrNot());
+				Position pos(0 , pos.GetRow() + 1 , pos.GetColor());
 				//try place another Queen
 				Move(pos);
 			}
@@ -32,7 +32,7 @@ void Queen :: Move(Position& pos)
 	}
 }
 
-bool Queen :: CanMoveToCell(Position& pos)
+bool Queen :: CanMoveToCell(const Position& pos)
 {
 	for(int i = 0 ; i < pos.GetRow(); ++i)
 	{

@@ -2,12 +2,12 @@
 
 void Position::ChangePositionSituation()
 {
-	free = !free;
+	status = !status;
 } 
 
 bool Position::FreeOrNot()
 {
-	return free;
+	return status;
 }
 
 int Position::GetRow()
