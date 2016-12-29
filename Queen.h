@@ -12,10 +12,10 @@ private:
 	void ShowBoard();
 public:
 	Queen() { count = 1; }
-	Queen(const Position& pos) : Figure(pos)
+	Queen(Position& pos) : Figure(pos)
 	{}
-	void Move(const Position& pos);
-	bool CanMoveToCell(const Position& pos);
+	void Move(Position&);
+	bool CanMoveToCell(Position&);
 	void Problem();
 	void Show();
 };

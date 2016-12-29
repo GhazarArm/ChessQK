@@ -17,7 +17,7 @@ public:
 	//if position free chang is not free and if position not free change is free 
 	void ChangePositionSituation();
 
-	bool FreeOrNot();
+	bool FreeOrNot() const;
 
 	int GetRow() const ;
 	int GetCol() const ;

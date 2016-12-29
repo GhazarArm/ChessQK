@@ -17,15 +17,17 @@ public:
 	//figure defoult constructor
 	Figure(){}
 	//figure costructor give  position addres 
-	Figure(const Position&);
+	Figure(Position&);
 	//move figure on position in board cell
-	virtual void Move(const Position&) = 0 ;
+	virtual void Move(Position&) = 0 ;
 	//
-	virtual bool CanMoveToCell(const Position&) = 0 ;
+	virtual bool CanMoveToCell(Position&) = 0 ;
 	//
 	virtual void Problem();
 	//
 	virtual void Show();
+
+	~Figure();
 };
 
 #endif

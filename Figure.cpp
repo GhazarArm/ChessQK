@@ -1,10 +1,8 @@
-#include "Figure.h"
+#include"Figure.h"
 
-Figure::Figure(Position& pos) : position(&pos)
-{}
+Figure::Figure(Position& pos) : position(&pos){};
 
-Figure::Figure() : position(nullptr)
-{}
+Figure::Figure() : position(nullptr){};
 
 Figure::~Figure() 
 {

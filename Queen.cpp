@@ -10,7 +10,7 @@ void Queen :: Problem()
 	Move(pos);	
 }
 
-void Queen :: Move(const Position& pos)
+void Queen :: Move(Position& pos)
 {
 	if(pos.GetRow() == 8)
 	{
@@ -39,7 +39,7 @@ void Queen :: Move(const Position& pos)
 	}
 }
 
-bool Queen :: CanMoveToCell(const Position& pos)
+bool Queen :: CanMoveToCell(Position& pos)
 {
 	for(int i = 0 ; i < pos.GetRow(); ++i)
 	{

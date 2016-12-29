@@ -5,7 +5,7 @@ void Position::ChangePositionSituation()
 	free = !free;
 }
 //if position free return true else return false
-bool Position::FreeOrNot()
+bool Position::FreeOrNot() const
 {
 	return free;
 }

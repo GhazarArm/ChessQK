@@ -7,10 +7,9 @@ void Knight::Move(Position& pos)
 		position = &pos;
 		position->ChangePositionSituation();
 	}
-	//else cout<<"Knight can't move there";
 }
 
-bool Knight::CanMoveToCell(const Position& pos)
+bool Knight::CanMoveToCell(Position& pos)
 {
 	if((position->GetCol() == pos.GetCol() - 2) && (position->GetRow() == pos.GetRow() - 1))
 		return true;
@@ -159,7 +158,7 @@ Knight::Knight(int _col , int _row)
 	position = board.GetBoardCell(_col , _row);
 }
 
-void Knight::Print()
+void Knight::Show()
 {
 	for(int i = 0 ; i < moves.size() ; ++i)
 	{
