@@ -11,11 +11,14 @@ private:
 
 	void CreatBoard();
 public:
+	//creat board
 	Board();
+	//delete board
 	~Board();
 
 	//if all board cells closed return true else return false
 	bool BoardFull();
+	//returned board cell
 	Position* GetBoardCell(int , int );
 };
 

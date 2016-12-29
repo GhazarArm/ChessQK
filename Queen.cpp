@@ -6,15 +6,17 @@ using namespace std;
 
 void Queen :: Problem()
 {
+	//set start position figure
 	Position pos(0, 0, black);
 	Move(pos);	
 }
 
+//move figure on position
 void Queen :: Move(Position& pos)
 {
 	if(pos.GetRow() == 8)
 	{
-		ShowBoard();
+		Show();
 	}
 	else
 	{
