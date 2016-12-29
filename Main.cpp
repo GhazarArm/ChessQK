@@ -16,6 +16,6 @@ int main ()
 	}
 
 	f->problem();
-
+	f->show();
 	return 0;
 }
