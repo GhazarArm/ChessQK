@@ -14,7 +14,7 @@ int main ()
 		Position start_pos(0 , 0 , black);
 		figure = new Queen(start_pos);
 	}
-	else
+	else if (your_wanted_problem == 0)
 	{
 		figure = new Knight(4 , 5);
 	}
