@@ -12,7 +12,7 @@ private:
 public:
 	Queen() { count = 1; }
 	Queen(Position& pos) : Figure(pos)
-	{}
+	{ count = 1; }
 	void Move(Position&);
 	bool CanMoveToCell(Position&);
 	void Problem();
