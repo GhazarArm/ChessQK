@@ -15,7 +15,6 @@ int main ()
 	if(your_wanted_problem == 1)
 	{
 		Position start_pos(0 , 0 , black);
-
 		Queen queen(start_pos);
 		figure = &queen;
 	}
