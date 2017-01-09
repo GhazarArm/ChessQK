@@ -10,20 +10,17 @@ int main ()
 	Figure* figure;
 
 	int your_wanted_problem;
-	std::cout << "Press 0 for Knight , 1 for Queen: " ;
+	std::cout << "Press 0 for Knight, 1 for Queen: " ;
 	std::cin>>your_wanted_problem;
 
 	if(your_wanted_problem == 1)
 	{
-		Position start_pos(0 , 0 , black);
-
-		Queen queen(start_pos);
-		figure = &queen;
+		Position start_pos(0, 0, black);
+		figure = new Queen(start_pos);
 	}
 	else if (your_wanted_problem == 0)
 	{
-		Knight knight(4 , 5);
-		figure = &knight;
+		figure = new Knight (4, 5);
 	}
 
 	figure->Problem();
