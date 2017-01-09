@@ -12,7 +12,7 @@ private:
 	int column;
 	bool free; //figures situation
 public:
-	Position(int  _col, int _row , Color col) : rows(_row) , column(_col) , color(col) ,  free(false){};
+	Position(int  _col, int _row , Color col) : rows(_row) , column(_col) , color(col) ,  free(true){};
 
 	//if position free chang is not free and if position not free change is free 
 	void ChangePositionSituation();
