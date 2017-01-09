@@ -213,5 +213,6 @@ void Knight::Show()
 
 Knight :: ~Knight()
 {
-	delete position;
+	for(int i = 0 ; i < moves.size() ; ++i)
+		delete moves[i];
 }
