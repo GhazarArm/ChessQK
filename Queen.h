@@ -18,7 +18,7 @@ public:
 	virtual void Problem();
 	virtual bool CanMoveToCell(Position&);
 	virtual void Show();
-	~Queen();
+	virtual ~Queen();
 };
 
 #endif /* QUEEN_H_ */
