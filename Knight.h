@@ -18,19 +18,21 @@ public:
 	//   end Constructors
 
 	//this is function Move figure to gets position
-	void Move(Position&);
+	virtual void Move(Position&);
 
-	//return true if our knighet can move this is position
-	bool CanMoveToCell(Position&);
+	//return true if our knight can move this is position
+	virtual bool CanMoveToCell(Position&);
 
-	//if ther is inaccessible cell return true else return false
+	//if there is inaccessible cell return true else return false
 	bool IsTherClosedCell();
 
 	//this function get is moves sequence
-	void Problem();
+	virtual void Problem();
 
 	//now i show knight moves
-	void Show();
+	virtual void Show();
+	//destructor
+	virtual ~Knight();
 };
 
 #endif

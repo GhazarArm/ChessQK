@@ -1,4 +1,6 @@
-#include  "Queen.h"
+//Queen.cpp
+
+#include "Queen.h"
 
 #include <iostream>
 using namespace std;
@@ -8,7 +10,7 @@ void Queen :: Problem()
 {
 	//set start position figure
 	Position pos(0, 0, black);
-	Move(pos);	
+	Move(pos);
 }
 
 //move figure on position
@@ -22,19 +24,19 @@ void Queen :: Move(Position& pos)
 	{
 		for (int i = 0; i < 8; i++)
 		{
-			 
-			Position pos(i, pos.GetRow(), pos.GetColor());
+
+			Position LoopPos(i, pos.GetRow(), pos.GetColor());
 			//Queen safe or not
-			if(CanMoveToCell(pos))
+			if(CanMoveToCell(LoopPos))
 			{
 				//free cell -> false ,, the position row, column is now busy
-				pos.ChangePositionSituation();
+				LoopPos.ChangePositionSituation();
 				//set in vector positions of safe queen
-				posvec[pos.GetRow()] = i;
+				posvec[LoopPos.GetRow()] = i;
 				//
-				Position pos(0 , pos.GetRow() + 1 , pos.GetColor());
+				Position Newpos(0 , pos.GetRow() + 1 , pos.GetColor());
 				//try place another Queen
-				Move(pos);
+				Move(Newpos);
 			}
 
 		}
@@ -53,7 +55,7 @@ bool Queen :: CanMoveToCell(Position& pos)
 		{
 			return false;
 		}
-	}	
+	}
 
 	return true;
 }
@@ -73,8 +75,14 @@ void Queen :: Show()
 				{
 					std::cout << " X";
 				}
-			}	
+			}
 			std::cout << std::endl;
 		}
 		std::cout << std::endl;
 }
+
+Queen :: ~Queen()
+{
+	delete position;
+}
+
