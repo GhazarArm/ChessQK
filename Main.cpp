@@ -1,25 +1,34 @@
-﻿#include "Queen.h"
-#include "Knight.h"
+//Main.cpp
+#include <iostream>
+
+#include "Queen.h"
 using namespace std;
-int main () 
+
+int main ()
 {
 	Figure* figure;
 
 	int your_wanted_problem;
-	cout << "Press 0 for Knight , 1 for Queen": ;
-	cin>>your_wanted_problem;
+	std::cout << "Press 0 for Knight , 1 for Queen: " ;
+	std::cin>>your_wanted_problem;
 
 	if(your_wanted_problem == 1)
 	{
 		Position start_pos(0 , 0 , black);
-		figure = new Queen(start_pos);
+
+		Queen queen(start_pos);
+		figure = &queen;
 	}
 	else if (your_wanted_problem == 0)
 	{
-		figure = new Knight(4 , 5);
+		//figure = new Knight(4 , 5);
+		std::cout << '0' << endl;
 	}
 
 	figure->Problem();
-	figure->Show();
+	//figure->Show();
 	return 0;
 }
+
+
+
