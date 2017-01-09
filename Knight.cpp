@@ -172,7 +172,8 @@ void Knight::Show()
 
 Knight :: ~Knight()
 {
-//
+	std::cout << "Knight destructor" << std::endl;
+	delete position;
 }
 
 
